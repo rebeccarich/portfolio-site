@@ -123,20 +123,28 @@ export const experience: Job[] = [
 
 export const projects: Project[] = [
   {
-    name: "MCP Server",
+    name: "Storybook Addon Flow Builder",
     description:
-      "Model Context Protocol server for accessing platform APIs via AI assistants.",
-    tech: ["TypeScript", "Node.js", "MCP"],
-    url: "https://github.com/rebeccarich",
-    image: "/projects/mcp-server.png",
+      "AI-driven user flow creation for Storybook. Describe a user journey in plain English, and the addon reads your component library, composes your atomic components into realistic screen layouts, and renders live previews — powered by Claude.",
+    tech: ["TypeScript", "React", "Storybook", "AI"],
+    url: "https://github.com/rebeccarich/storybook-addon-flow-builder",
+    image: "/projects/storybook-addon-flow-builder.png",
   },
   {
-    name: "Open Source Contributions",
+    name: "nuxt-launch-darkly",
     description:
-      "Contributions to open source projects in the frontend ecosystem.",
-    tech: ["TypeScript", "JavaScript", "Vue", "React"],
-    url: "https://github.com/rebeccarich",
-    image: "/projects/open-source.png",
+      "A Nuxt 3 module for interacting with the LaunchDarkly SDK. Provides a composable for Composition API support and REST endpoints for custom integrations.",
+    tech: ["TypeScript", "Nuxt 3", "LaunchDarkly"],
+    url: "https://github.com/rebeccarich/nuxt-launch-darkly",
+    image: "/projects/nuxt-launch-darkly.svg",
+  },
+  {
+    name: "Intro to Computer Science",
+    description:
+      "An interactive presentation introducing Computer Science concepts to school students.",
+    tech: ["SCSS", "HTML", "Education"],
+    url: "https://github.com/rebeccarich/intro-to-comp-science",
+    image: "/projects/intro-to-comp-science.svg",
   },
 ];
 
