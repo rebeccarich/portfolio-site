@@ -21,7 +21,11 @@ export function Projects() {
             <h3 className={styles.name}>
               {project.url ? (
                 <a href={project.url} target="_blank" rel="noopener noreferrer">
-                  {project.name} <span className={styles.arrow}>&#8599;</span>
+                  {project.name}
+                  <svg className={styles.arrow} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M7 17L17 7" />
+                    <path d="M7 7h10v10" />
+                  </svg>
                 </a>
               ) : (
                 project.name
