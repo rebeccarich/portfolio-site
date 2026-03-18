@@ -29,7 +29,7 @@ function App() {
           </div>
         </div>
 
-        {/* Experience: standalone section (not in card) */}
+        {/* Experience: full width within main */}
         <Experience />
 
         {/* Row 4: Projects */}
