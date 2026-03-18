@@ -17,15 +17,11 @@ function App() {
     <>
       <Nav theme={theme} onToggleTheme={toggleTheme} />
       <Hero />
+      <About />
       <main className={styles.main}>
-        {/* Row 1: About (60%) + Achievements (40%) */}
-        <div className={styles.row}>
-          <div className={styles.wide}>
-            <About />
-          </div>
-          <div className={styles.narrow}>
-            <Achievements />
-          </div>
+        {/* Row 1: Achievements (full width) */}
+        <div className={styles.fullWidth}>
+          <Achievements />
         </div>
 
         {/* Row 2: Skills (full width) */}

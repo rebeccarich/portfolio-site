@@ -1,18 +1,21 @@
-.heading {
-  font-size: 1.5rem;
-  color: var(--color-accent);
-  margin-bottom: 1rem;
+.about {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1.5rem 3rem;
 }
 
 .bio {
   color: var(--color-text-secondary);
+  font-size: 1.125rem;
   line-height: 1.8;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .details {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem;
 }
 
