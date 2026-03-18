@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import * as resume from '../../data/resume'
-import { EnvelopeIcon, GitHubIcon, LinkedInIcon } from '../Icons/Icons'
+import { EnvelopeIcon, DownloadIcon, GitHubIcon, LinkedInIcon } from '../Icons/Icons'
 import styles from './About.module.css'
 
 export function About() {
@@ -39,6 +39,9 @@ export function About() {
           aria-label="LinkedIn"
         >
           <LinkedInIcon size={18} />
+        </a>
+        <a href="/rebecca-richards-resume.pdf" download className={styles.iconLink} aria-label="Download resume">
+          <DownloadIcon size={18} />
         </a>
       </div>
     </motion.section>
