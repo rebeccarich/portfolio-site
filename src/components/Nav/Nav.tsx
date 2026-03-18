@@ -77,6 +77,9 @@ export function Nav({ theme, onToggleTheme }: NavProps) {
           ))}
         </ul>
 
+        <a href="/rebecca-richards-resume.pdf" download className={styles.resumeLink}>
+          Resume
+        </a>
         <ThemeToggle theme={theme} onToggle={onToggleTheme} />
       </div>
     </nav>
