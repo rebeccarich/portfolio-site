@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import * as resume from '../../data/resume'
-import { GitHubIcon, LinkedInIcon } from '../Icons/Icons'
+import { EnvelopeIcon, MapPinIcon, GitHubIcon, LinkedInIcon } from '../Icons/Icons'
 import styles from './About.module.css'
 
 export function About() {
@@ -20,9 +20,13 @@ export function About() {
       <p className={styles.bio}>{resume.bio}</p>
       <div className={styles.details}>
         <a href={`mailto:${resume.email}`} className={styles.pill}>
+          <EnvelopeIcon size={14} />
           {resume.email}
         </a>
-        <span className={styles.pill}>{resume.location}</span>
+        <span className={styles.pill}>
+          <MapPinIcon size={14} />
+          {resume.location}
+        </span>
         <a
           href={resume.github}
           target="_blank"

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import * as resume from '../../data/resume'
+import { CalendarIcon } from '../Icons/Icons'
 import styles from './Experience.module.css'
 
 export function Experience() {
@@ -43,7 +44,10 @@ export function Experience() {
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
             >
-              <div className={styles.detailPeriod}>{resume.experience[activeIndex].period}</div>
+              <div className={styles.detailPeriod}>
+                <CalendarIcon size={13} />
+                {resume.experience[activeIndex].period}
+              </div>
               <h3 className={styles.detailTitle}>{resume.experience[activeIndex].title}</h3>
               <p className={styles.detailCompany}>{resume.experience[activeIndex].company}</p>
               {resume.experience[activeIndex].description && (
