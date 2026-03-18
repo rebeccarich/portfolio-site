@@ -4,7 +4,7 @@ import styles from "./Experience.module.css";
 
 export function Experience() {
   return (
-    <BentoCard span="full">
+    <BentoCard span="full" id="experience">
       <h2 className={styles.heading}>Experience</h2>
       <div className={styles.timeline}>
         {resume.experience.map((job, i) => (

@@ -1,4 +1,4 @@
-import { ReactNode, useRef } from "react";
+import { type ReactNode, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import styles from "./BentoCard.module.css";
 
@@ -6,9 +6,10 @@ interface BentoCardProps {
   children: ReactNode;
   span?: "1" | "2" | "3" | "full";
   className?: string;
+  id?: string;
 }
 
-export function BentoCard({ children, span = "1", className = "" }: BentoCardProps) {
+export function BentoCard({ children, span = "1", className = "", id }: BentoCardProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
@@ -23,6 +24,7 @@ export function BentoCard({ children, span = "1", className = "" }: BentoCardPro
 
   return (
     <motion.div
+      id={id}
       ref={ref}
       className={`${styles.card} ${styles[`span${span}`]} ${className}`}
       onMouseMove={handleMouseMove}

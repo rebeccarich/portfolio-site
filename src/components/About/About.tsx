@@ -4,7 +4,7 @@ import styles from "./About.module.css";
 
 export function About() {
   return (
-    <BentoCard span="2">
+    <BentoCard span="2" id="about">
       <h2 className={styles.heading}>About</h2>
       <p className={styles.bio}>{resume.bio}</p>
       <div className={styles.details}>

@@ -5,7 +5,7 @@ import styles from "./Skills.module.css";
 
 export function Skills() {
   return (
-    <BentoCard span="2">
+    <BentoCard span="2" id="skills">
       <h2 className={styles.heading}>Skills</h2>
       {resume.proficientSkills.map((cat) => (
         <div key={cat.label} className={styles.category}>

@@ -4,7 +4,7 @@ import styles from "./Contact.module.css";
 
 export function Contact() {
   return (
-    <BentoCard span="full">
+    <BentoCard span="full" id="contact">
       <div className={styles.wrapper}>
         <h2 className={styles.heading}>Let's build something together</h2>
         <p className={styles.subtext}>
