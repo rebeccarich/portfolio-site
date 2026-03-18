@@ -29,16 +29,16 @@ function App() {
           </div>
         </div>
 
-        {/* Experience: full width within main */}
-        <Experience />
-
-        {/* Row 4: Projects */}
+        {/* Projects */}
         <section id="projects" className={styles.fullWidth}>
           <h2 className={styles.sectionHeading}>Projects</h2>
           <div className={styles.projectsGrid}>
             <Projects />
           </div>
         </section>
+
+        {/* Experience: full width within main */}
+        <Experience />
 
         {/* Row 5: Education (40%) + Contact (60%) — flipped */}
         <div className={styles.rowReverse}>
