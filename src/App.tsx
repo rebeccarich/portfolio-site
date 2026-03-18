@@ -29,10 +29,8 @@ function App() {
           </div>
         </div>
 
-        {/* Row 3: Experience (full width) */}
-        <div className={styles.fullWidth}>
-          <Experience />
-        </div>
+        {/* Experience: standalone section (not in card) */}
+        <Experience />
 
         {/* Row 4: Projects */}
         <section id="projects" className={styles.fullWidth}>
