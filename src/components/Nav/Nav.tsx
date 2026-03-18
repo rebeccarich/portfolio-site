@@ -14,23 +14,24 @@ export function Nav({ theme, onToggleTheme }: NavProps) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id)
+    const onScroll = () => {
+      const offset = 120
+      let current = ''
+      for (const id of sections) {
+        const el = document.getElementById(id)
+        if (el) {
+          const top = el.getBoundingClientRect().top
+          if (top <= offset) {
+            current = id
           }
-        })
-      },
-      { rootMargin: '-50% 0px -50% 0px' }
-    )
+        }
+      }
+      setActive(current)
+    }
 
-    sections.forEach((id) => {
-      const el = document.getElementById(id)
-      if (el) observer.observe(el)
-    })
-
-    return () => observer.disconnect()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   const handleClick = (id: string) => {
