@@ -16,14 +16,19 @@ export function Nav({ theme, onToggleTheme }: NavProps) {
   useEffect(() => {
     const onScroll = () => {
       const offset = 120
+      const atBottom =
+        window.innerHeight + window.scrollY >= document.body.scrollHeight - 50
+
+      if (atBottom) {
+        setActive(sections[sections.length - 1])
+        return
+      }
+
       let current = ''
       for (const id of sections) {
         const el = document.getElementById(id)
-        if (el) {
-          const top = el.getBoundingClientRect().top
-          if (top <= offset) {
-            current = id
-          }
+        if (el && el.getBoundingClientRect().top <= offset) {
+          current = id
         }
       }
       setActive(current)
