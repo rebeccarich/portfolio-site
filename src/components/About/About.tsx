@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import * as resume from '../../data/resume'
+import * as cv from '../../data/cv'
 import { EnvelopeIcon, DownloadIcon, GitHubIcon, LinkedInIcon } from '../Icons/Icons'
 import styles from './About.module.css'
 
@@ -17,13 +17,13 @@ export function About() {
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
     >
-      <p className={styles.bio}>{resume.bio}</p>
+      <p className={styles.bio}>{cv.bio}</p>
       <div className={styles.details}>
-        <a href={`mailto:${resume.email}`} className={styles.iconLink} aria-label="Email">
+        <a href={`mailto:${cv.email}`} className={styles.iconLink} aria-label="Email">
           <EnvelopeIcon size={18} />
         </a>
         <a
-          href={resume.github}
+          href={cv.github}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.iconLink}
@@ -32,7 +32,7 @@ export function About() {
           <GitHubIcon size={18} />
         </a>
         <a
-          href={resume.linkedin}
+          href={cv.linkedin}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.iconLink}
@@ -40,7 +40,7 @@ export function About() {
         >
           <LinkedInIcon size={18} />
         </a>
-        <a href="/rebecca-richards-resume.pdf" download className={styles.iconLink} aria-label="Download resume">
+        <a href="/rebecca-richards-cv.pdf" download className={styles.iconLink} aria-label="Download CV">
           <DownloadIcon size={18} />
         </a>
       </div>

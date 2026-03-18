@@ -1,5 +1,5 @@
 import { motion, type Variants } from 'framer-motion'
-import * as resume from '../../data/resume'
+import * as cv from '../../data/cv'
 import styles from './Hero.module.css'
 
 const container: Variants = {
@@ -27,13 +27,13 @@ export function Hero() {
           Rebecca <span>Richards</span>
         </motion.h1>
         <motion.p className={styles.title} variants={item}>
-          {resume.title}
+          {cv.title}
         </motion.p>
         <motion.div className={styles.techList} variants={item}>
-          {resume.headlineTech.map((tech, i) => (
+          {cv.headlineTech.map((tech, i) => (
             <span key={tech}>
               <span className={styles.tech}>{tech}</span>
-              {i < resume.headlineTech.length - 1 && <span className={styles.separator}>·</span>}
+              {i < cv.headlineTech.length - 1 && <span className={styles.separator}>·</span>}
             </span>
           ))}
         </motion.div>

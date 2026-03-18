@@ -1,5 +1,5 @@
 import { Section } from '../Section/Section'
-import * as resume from '../../data/resume'
+import * as cv from '../../data/cv'
 import { ArrowRightIcon, GitHubIcon, LinkedInIcon } from '../Icons/Icons'
 import styles from './Contact.module.css'
 
@@ -13,12 +13,12 @@ export function Contact() {
           chat about frontend engineering.
         </p>
         <div className={styles.links}>
-          <a href={`mailto:${resume.email}`} className={styles.cta}>
+          <a href={`mailto:${cv.email}`} className={styles.cta}>
             Say hello
             <ArrowRightIcon size={16} />
           </a>
           <a
-            href={resume.github}
+            href={cv.github}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.iconLink}
@@ -27,7 +27,7 @@ export function Contact() {
             <GitHubIcon size={20} />
           </a>
           <a
-            href={resume.linkedin}
+            href={cv.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.iconLink}

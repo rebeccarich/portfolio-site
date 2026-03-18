@@ -1,11 +1,11 @@
 import { Section } from '../Section/Section'
-import * as resume from '../../data/resume'
+import * as cv from '../../data/cv'
 import styles from './Projects.module.css'
 
 export function Projects() {
   return (
     <>
-      {resume.projects.map((project) => (
+      {cv.projects.map((project) => (
         <Section key={project.name}>
           {project.image && (
             <a

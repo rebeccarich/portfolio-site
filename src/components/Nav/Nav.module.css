@@ -106,7 +106,7 @@
   transform: translateY(-6.5px) rotate(-45deg);
 }
 
-.resumeLink {
+.cvLink {
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
@@ -125,7 +125,7 @@
     border-color 0.2s ease;
 }
 
-.resumeLink:hover {
+.cvLink:hover {
   color: var(--color-accent);
   border-color: var(--color-accent);
 }

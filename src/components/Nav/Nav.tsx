@@ -78,7 +78,7 @@ export function Nav({ theme, onToggleTheme }: NavProps) {
           ))}
         </ul>
 
-        <a href="/rebecca-richards-resume.pdf" download className={styles.resumeLink}>
+        <a href="/rebecca-richards-cv.pdf" download className={styles.cvLink}>
           <DownloadIcon size={14} />
           CV
         </a>

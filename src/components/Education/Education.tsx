@@ -1,5 +1,5 @@
 import { Section } from '../Section/Section'
-import * as resume from '../../data/resume'
+import * as cv from '../../data/cv'
 import styles from './Education.module.css'
 
 export function Education() {
@@ -7,7 +7,7 @@ export function Education() {
     <Section>
       <h2 className={styles.heading}>Education</h2>
       <div className={styles.entries}>
-        {resume.education.map((edu, i) => (
+        {cv.education.map((edu, i) => (
           <div key={i} className={styles.entry}>
             <h3 className={styles.degree}>{edu.degree}</h3>
             <p className={styles.school}>{edu.school}</p>

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import * as resume from '../../data/resume'
+import * as cv from '../../data/cv'
 import { CalendarIcon } from '../Icons/Icons'
 import styles from './Experience.module.css'
 
@@ -14,7 +14,7 @@ export function Experience() {
       <div className={styles.grid}>
         {/* Timeline nav — left column */}
         <div className={styles.nav}>
-          {resume.experience.map((job, i) => (
+          {cv.experience.map((job, i) => (
             <button
               key={i}
               className={`${styles.entry} ${i === activeIndex ? styles.active : ''}`}
@@ -22,7 +22,7 @@ export function Experience() {
             >
               <div className={styles.indicator}>
                 <div className={styles.dot} />
-                {i < resume.experience.length - 1 && <div className={styles.connector} />}
+                {i < cv.experience.length - 1 && <div className={styles.connector} />}
               </div>
               <div className={styles.entryContent}>
                 <span className={styles.period}>{job.period.split('–')[0].trim()}</span>
@@ -46,16 +46,16 @@ export function Experience() {
             >
               <div className={styles.detailPeriod}>
                 <CalendarIcon size={13} />
-                {resume.experience[activeIndex].period}
+                {cv.experience[activeIndex].period}
               </div>
-              <h3 className={styles.detailTitle}>{resume.experience[activeIndex].title}</h3>
-              <p className={styles.detailCompany}>{resume.experience[activeIndex].company}</p>
-              {resume.experience[activeIndex].description && (
-                <p className={styles.description}>{resume.experience[activeIndex].description}</p>
+              <h3 className={styles.detailTitle}>{cv.experience[activeIndex].title}</h3>
+              <p className={styles.detailCompany}>{cv.experience[activeIndex].company}</p>
+              {cv.experience[activeIndex].description && (
+                <p className={styles.description}>{cv.experience[activeIndex].description}</p>
               )}
-              {resume.experience[activeIndex].bullets.length > 0 && (
+              {cv.experience[activeIndex].bullets.length > 0 && (
                 <ul className={styles.bullets}>
-                  {resume.experience[activeIndex].bullets.map((bullet, j) => (
+                  {cv.experience[activeIndex].bullets.map((bullet, j) => (
                     <li key={j}>{bullet}</li>
                   ))}
                 </ul>
