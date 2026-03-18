@@ -27,7 +27,7 @@ export interface SkillCategory {
 
 export const name = "Rebecca Richards";
 export const title = "Principal Frontend Engineer";
-export const tagline = "Building interfaces humans actually enjoy using";
+export const headlineTech = ["TypeScript", "JavaScript", "React", "Node"];
 export const location = "Dublin, Ireland";
 export const email = "rebeccarich1@gmail.com";
 export const phone = "+353 87 269 7854";

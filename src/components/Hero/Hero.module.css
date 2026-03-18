@@ -50,12 +50,26 @@
   font-weight: 500;
 }
 
-.tagline {
-  font-family: var(--font-heading);
-  font-style: italic;
-  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  color: var(--color-text-secondary);
+.techList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
   margin-top: 1.25rem;
+}
+
+.tech {
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+
+.separator {
+  color: var(--color-accent);
+  margin: 0 0.5rem;
+  font-size: 1.25rem;
 }
 
 .scrollIndicator {

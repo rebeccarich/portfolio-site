@@ -29,9 +29,16 @@ export function Hero() {
         <motion.p className={styles.title} variants={item}>
           {resume.title}
         </motion.p>
-        <motion.p className={styles.tagline} variants={item}>
-          {resume.tagline}
-        </motion.p>
+        <motion.div className={styles.techList} variants={item}>
+          {resume.headlineTech.map((tech, i) => (
+            <span key={tech}>
+              <span className={styles.tech}>{tech}</span>
+              {i < resume.headlineTech.length - 1 && (
+                <span className={styles.separator}>·</span>
+              )}
+            </span>
+          ))}
+        </motion.div>
       </motion.div>
 
       <motion.div
