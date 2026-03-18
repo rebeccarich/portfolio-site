@@ -1,15 +1,14 @@
 import { type ReactNode, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import styles from "./BentoCard.module.css";
+import styles from "./Section.module.css";
 
-interface BentoCardProps {
+interface SectionProps {
   children: ReactNode;
-  span?: "1" | "2" | "3" | "full";
   className?: string;
   id?: string;
 }
 
-export function BentoCard({ children, span = "1", className = "", id }: BentoCardProps) {
+export function Section({ children, className = "", id }: SectionProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
@@ -26,7 +25,7 @@ export function BentoCard({ children, span = "1", className = "", id }: BentoCar
     <motion.div
       id={id}
       ref={ref}
-      className={`${styles.card} ${styles[`span${span}`]} ${className}`}
+      className={`${styles.section} ${className}`}
       onMouseMove={handleMouseMove}
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}

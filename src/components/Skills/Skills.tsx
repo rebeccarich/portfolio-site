@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { BentoCard } from "../BentoCard/BentoCard";
+import { Section } from "../Section/Section";
 import * as resume from "../../data/resume";
 import styles from "./Skills.module.css";
 
 export function Skills() {
   return (
-    <BentoCard span="2" id="skills">
+    <Section id="skills">
       <h2 className={styles.heading}>Skills</h2>
       {resume.proficientSkills.map((cat) => (
         <div key={cat.label} className={styles.category}>
@@ -34,6 +34,6 @@ export function Skills() {
           ))}
         </div>
       </div>
-    </BentoCard>
+    </Section>
   );
 }

@@ -1,4 +1,4 @@
-.card {
+.section {
   position: relative;
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
@@ -7,7 +7,7 @@
   transition: var(--transition-theme), transform 0.2s ease;
 }
 
-.card:hover {
+.section:hover {
   transform: translateY(-2px);
   border-color: var(--color-accent);
 }
@@ -25,7 +25,7 @@
   pointer-events: none;
 }
 
-.card:hover .spotlight {
+.section:hover .spotlight {
   opacity: 1;
 }
 
@@ -33,34 +33,4 @@
   position: relative;
   padding: 1.75rem;
   z-index: 1;
-}
-
-.span1 {
-  grid-column: span 1;
-}
-
-.span2 {
-  grid-column: span 2;
-}
-
-.span3 {
-  grid-column: span 3;
-}
-
-.spanfull {
-  grid-column: 1 / -1;
-}
-
-@media (max-width: 1024px) {
-  .span3 {
-    grid-column: span 2;
-  }
-}
-
-@media (max-width: 640px) {
-  .span2,
-  .span3,
-  .spanfull {
-    grid-column: span 1;
-  }
 }

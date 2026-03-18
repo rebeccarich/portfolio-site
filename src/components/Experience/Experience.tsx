@@ -1,10 +1,10 @@
-import { BentoCard } from "../BentoCard/BentoCard";
+import { Section } from "../Section/Section";
 import * as resume from "../../data/resume";
 import styles from "./Experience.module.css";
 
 export function Experience() {
   return (
-    <BentoCard span="full" id="experience">
+    <Section id="experience">
       <h2 className={styles.heading}>Experience</h2>
       <div className={styles.timeline}>
         {resume.experience.map((job, i) => (
@@ -32,6 +32,6 @@ export function Experience() {
           </div>
         ))}
       </div>
-    </BentoCard>
+    </Section>
   );
 }

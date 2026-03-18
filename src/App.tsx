@@ -1,7 +1,6 @@
 import { useTheme } from "./theme/useTheme";
 import { Nav } from "./components/Nav/Nav";
 import { Hero } from "./components/Hero/Hero";
-import { BentoGrid } from "./components/BentoGrid/BentoGrid";
 import { About } from "./components/About/About";
 import { Skills } from "./components/Skills/Skills";
 import { Achievements } from "./components/Achievements/Achievements";
@@ -18,21 +17,44 @@ function App() {
     <>
       <Nav theme={theme} onToggleTheme={toggleTheme} />
       <Hero />
-      <main>
-        <BentoGrid>
-          <About />
-          <Achievements />
+      <main className={styles.main}>
+        {/* Row 1: About (60%) + Achievements (40%) */}
+        <div className={styles.row}>
+          <div className={styles.wide}>
+            <About />
+          </div>
+          <div className={styles.narrow}>
+            <Achievements />
+          </div>
+        </div>
+
+        {/* Row 2: Skills (full width) */}
+        <div id="skills" className={styles.fullWidth}>
           <Skills />
+        </div>
+
+        {/* Row 3: Experience (full width) */}
+        <div className={styles.fullWidth}>
           <Experience />
-          <section id="projects" className={styles.projectsSection}>
-            <h2 className={styles.sectionHeading}>Projects</h2>
-            <div className={styles.projectsGrid}>
-              <Projects />
-            </div>
-          </section>
-          <Education />
-          <Contact />
-        </BentoGrid>
+        </div>
+
+        {/* Row 4: Projects */}
+        <section id="projects" className={styles.fullWidth}>
+          <h2 className={styles.sectionHeading}>Projects</h2>
+          <div className={styles.projectsGrid}>
+            <Projects />
+          </div>
+        </section>
+
+        {/* Row 5: Education (40%) + Contact (60%) — flipped */}
+        <div className={styles.rowReverse}>
+          <div className={styles.narrow}>
+            <Education />
+          </div>
+          <div className={styles.wide}>
+            <Contact />
+          </div>
+        </div>
       </main>
       <footer className={styles.footer}>
         <p>&copy; {new Date().getFullYear()} Rebecca Richards</p>

@@ -1,10 +1,10 @@
-import { BentoCard } from "../BentoCard/BentoCard";
+import { Section } from "../Section/Section";
 import * as resume from "../../data/resume";
 import styles from "./Education.module.css";
 
 export function Education() {
   return (
-    <BentoCard>
+    <Section>
       <h2 className={styles.heading}>Education</h2>
       <div className={styles.entries}>
         {resume.education.map((edu, i) => (
@@ -20,6 +20,6 @@ export function Education() {
           </div>
         ))}
       </div>
-    </BentoCard>
+    </Section>
   );
 }

@@ -1,10 +1,10 @@
-import { BentoCard } from "../BentoCard/BentoCard";
+import { Section } from "../Section/Section";
 import * as resume from "../../data/resume";
 import styles from "./About.module.css";
 
 export function About() {
   return (
-    <BentoCard span="2" id="about">
+    <Section id="about">
       <h2 className={styles.heading}>About</h2>
       <p className={styles.bio}>{resume.bio}</p>
       <div className={styles.details}>
@@ -19,6 +19,6 @@ export function About() {
           LinkedIn
         </a>
       </div>
-    </BentoCard>
+    </Section>
   );
 }

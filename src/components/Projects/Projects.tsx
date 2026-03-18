@@ -1,4 +1,4 @@
-import { BentoCard } from "../BentoCard/BentoCard";
+import { Section } from "../Section/Section";
 import * as resume from "../../data/resume";
 import styles from "./Projects.module.css";
 
@@ -6,7 +6,7 @@ export function Projects() {
   return (
     <>
       {resume.projects.map((project) => (
-        <BentoCard key={project.name}>
+        <Section key={project.name}>
           <h3 className={styles.name}>
             {project.url ? (
               <a href={project.url} target="_blank" rel="noopener noreferrer">
@@ -24,7 +24,7 @@ export function Projects() {
               </span>
             ))}
           </div>
-        </BentoCard>
+        </Section>
       ))}
     </>
   );

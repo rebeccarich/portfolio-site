@@ -1,10 +1,10 @@
-import { BentoCard } from "../BentoCard/BentoCard";
+import { Section } from "../Section/Section";
 import * as resume from "../../data/resume";
 import styles from "./Contact.module.css";
 
 export function Contact() {
   return (
-    <BentoCard span="full" id="contact">
+    <Section id="contact">
       <div className={styles.wrapper}>
         <h2 className={styles.heading}>Let's build something together</h2>
         <p className={styles.subtext}>
@@ -33,6 +33,6 @@ export function Contact() {
           </a>
         </div>
       </div>
-    </BentoCard>
+    </Section>
   );
 }
