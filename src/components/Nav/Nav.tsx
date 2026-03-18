@@ -8,7 +8,7 @@ interface NavProps {
   onToggleTheme: () => void
 }
 
-const sections = ['about', 'skills', 'experience', 'projects', 'contact']
+const sections = ['about', 'skills', 'projects', 'experience', 'contact']
 
 export function Nav({ theme, onToggleTheme }: NavProps) {
   const [active, setActive] = useState('')
