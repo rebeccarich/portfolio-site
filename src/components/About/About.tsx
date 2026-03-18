@@ -19,9 +19,8 @@ export function About() {
     >
       <p className={styles.bio}>{resume.bio}</p>
       <div className={styles.details}>
-        <a href={`mailto:${resume.email}`} className={styles.pill}>
-          <EnvelopeIcon size={14} />
-          {resume.email}
+        <a href={`mailto:${resume.email}`} className={styles.iconLink} aria-label="Email">
+          <EnvelopeIcon size={18} />
         </a>
         <a
           href={resume.github}
