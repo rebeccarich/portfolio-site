@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { ThemeToggle } from '../ThemeToggle/ThemeToggle'
+import { DownloadIcon } from '../Icons/Icons'
 import styles from './Nav.module.css'
 
 interface NavProps {
@@ -78,6 +79,7 @@ export function Nav({ theme, onToggleTheme }: NavProps) {
         </ul>
 
         <a href="/rebecca-richards-resume.pdf" download className={styles.resumeLink}>
+          <DownloadIcon size={14} />
           Resume
         </a>
         <ThemeToggle theme={theme} onToggle={onToggleTheme} />
