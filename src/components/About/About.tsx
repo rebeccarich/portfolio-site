@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import * as resume from '../../data/resume'
+import { GitHubIcon, LinkedInIcon } from '../Icons/Icons'
 import styles from './About.module.css'
 
 export function About() {
@@ -22,11 +23,23 @@ export function About() {
           {resume.email}
         </a>
         <span className={styles.pill}>{resume.location}</span>
-        <a href={resume.github} target="_blank" rel="noopener noreferrer" className={styles.pill}>
-          GitHub
+        <a
+          href={resume.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.iconLink}
+          aria-label="GitHub"
+        >
+          <GitHubIcon size={18} />
         </a>
-        <a href={resume.linkedin} target="_blank" rel="noopener noreferrer" className={styles.pill}>
-          LinkedIn
+        <a
+          href={resume.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.iconLink}
+          aria-label="LinkedIn"
+        >
+          <LinkedInIcon size={18} />
         </a>
       </div>
     </motion.section>

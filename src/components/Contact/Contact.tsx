@@ -1,5 +1,6 @@
 import { Section } from '../Section/Section'
 import * as resume from '../../data/resume'
+import { GitHubIcon, LinkedInIcon } from '../Icons/Icons'
 import styles from './Contact.module.css'
 
 export function Contact() {
@@ -15,16 +16,23 @@ export function Contact() {
           <a href={`mailto:${resume.email}`} className={styles.cta}>
             Say hello
           </a>
-          <a href={resume.github} target="_blank" rel="noopener noreferrer" className={styles.link}>
-            GitHub
+          <a
+            href={resume.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.iconLink}
+            aria-label="GitHub"
+          >
+            <GitHubIcon size={20} />
           </a>
           <a
             href={resume.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.link}
+            className={styles.iconLink}
+            aria-label="LinkedIn"
           >
-            LinkedIn
+            <LinkedInIcon size={20} />
           </a>
         </div>
       </div>

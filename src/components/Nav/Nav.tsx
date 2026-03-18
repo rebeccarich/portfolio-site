@@ -16,8 +16,7 @@ export function Nav({ theme, onToggleTheme }: NavProps) {
   useEffect(() => {
     const onScroll = () => {
       const offset = 120
-      const atBottom =
-        window.innerHeight + window.scrollY >= document.body.scrollHeight - 50
+      const atBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight - 50
 
       if (atBottom) {
         setActive(sections[sections.length - 1])
