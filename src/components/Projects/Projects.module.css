@@ -39,13 +39,15 @@
 }
 
 .arrow {
-  font-size: 0.8125rem;
-  opacity: 0.4;
-  transition: opacity 0.2s ease;
+  font-size: 0.875rem;
+  color: var(--color-accent);
+  margin-left: 0.25rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
 }
 
 .name a:hover .arrow {
-  opacity: 1;
+  transform: translate(2px, -2px);
 }
 
 .description {
