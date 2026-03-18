@@ -4,20 +4,20 @@
   padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 
 .row {
   display: grid;
   grid-template-columns: 3fr 2fr;
-  gap: 1.5rem;
+  gap: 1.75rem;
   align-items: start;
 }
 
 .rowReverse {
   display: grid;
   grid-template-columns: 2fr 3fr;
-  gap: 1.5rem;
+  gap: 1.75rem;
   align-items: stretch;
 }
 
@@ -35,22 +35,26 @@
 
 .sectionHeading {
   font-size: 1.75rem;
+  font-weight: 300;
   color: var(--color-accent);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.02em;
 }
 
 .projectsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.75rem;
 }
 
 .footer {
   text-align: center;
-  padding: 2rem;
+  padding: 3rem 1.5rem;
   color: var(--color-text-secondary);
-  font-size: 0.8125rem;
-  border-top: 1px solid var(--color-border);
+  font-size: 0.75rem;
+  font-family: var(--font-heading);
+  font-weight: 300;
+  letter-spacing: 0.05em;
 }
 
 @media (max-width: 768px) {

@@ -10,44 +10,38 @@
 }
 
 .content {
-  max-width: 700px;
+  max-width: 800px;
 }
 
 .name {
   font-family: var(--font-heading);
-  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-size: clamp(3.5rem, 9vw, 6.5rem);
+  font-weight: 200;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--color-text);
+}
+
+.name span {
   font-weight: 700;
-  line-height: 1.05;
   background: linear-gradient(
     135deg,
-    var(--color-text) 0%,
-    var(--color-accent) 50%,
-    var(--color-text) 100%
+    var(--color-accent) 0%,
+    #00d4aa 100%
   );
-  background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shimmer 4s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-  0%, 100% {
-    background-position: 0% center;
-  }
-  50% {
-    background-position: 100% center;
-  }
 }
 
 .title {
-  font-family: var(--font-body);
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-  color: var(--color-accent);
-  letter-spacing: 0.1em;
+  font-family: var(--font-heading);
+  font-size: clamp(0.875rem, 2vw, 1.0625rem);
+  color: var(--color-text-secondary);
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  margin-top: 1rem;
-  font-weight: 500;
+  margin-top: 1.25rem;
+  font-weight: 300;
 }
 
 .techList {
@@ -56,26 +50,28 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.25rem;
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
 }
 
 .tech {
   font-family: var(--font-body);
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-size: clamp(0.8rem, 1.5vw, 0.9375rem);
   color: var(--color-text-secondary);
   font-weight: 400;
 }
 
 .separator {
   color: var(--color-accent);
-  margin: 0 0.5rem;
-  font-size: 1.25rem;
+  margin: 0 0.625rem;
+  font-size: 0.5rem;
+  opacity: 0.6;
 }
 
 .scrollIndicator {
   position: absolute;
-  bottom: 2rem;
-  color: var(--color-text-secondary);
+  bottom: 2.5rem;
+  color: var(--color-accent);
+  opacity: 0.4;
 }
 
 @media (prefers-reduced-motion: reduce) {

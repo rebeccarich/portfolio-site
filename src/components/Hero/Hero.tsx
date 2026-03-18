@@ -24,7 +24,7 @@ export function Hero() {
         animate="visible"
       >
         <motion.h1 className={styles.name} variants={item}>
-          {resume.name}
+          Rebecca <span>Richards</span>
         </motion.h1>
         <motion.p className={styles.title} variants={item}>
           {resume.title}

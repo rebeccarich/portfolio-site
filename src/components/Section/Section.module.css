@@ -3,19 +3,39 @@
   height: 100%;
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
-  transition: var(--transition-theme), transform 0.2s ease;
+  box-shadow: var(--shadow-card);
+  transition:
+    var(--transition-theme),
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--color-accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .section:hover {
-  transform: translateY(-2px);
-  border-color: var(--color-accent);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.section:hover::before {
+  opacity: 1;
 }
 
 .content {
   position: relative;
-  padding: 1.75rem;
+  padding: 2rem;
   z-index: 1;
   height: 100%;
 }

@@ -14,14 +14,16 @@
   align-items: center;
   gap: 0.5rem;
   margin-top: auto;
-  padding-top: 0.75rem;
+  padding-top: 1rem;
   border-top: 1px solid var(--color-border);
 }
 
 .heading {
   font-size: 1.5rem;
+  font-weight: 300;
   color: var(--color-accent);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
 }
 
 .category {
@@ -37,10 +39,10 @@
 }
 
 .label {
-  font-family: var(--font-body);
+  font-family: var(--font-heading);
   font-size: 0.625rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-text-secondary);
   margin-right: 0.25rem;
@@ -56,15 +58,17 @@
   padding: 0.25rem 0.625rem;
   background: var(--color-accent-subtle);
   color: var(--color-accent);
-  border-radius: 100px;
+  border-radius: 4px;
   font-size: 0.75rem;
   font-weight: 500;
   cursor: default;
-  transition: background-color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
 }
 
 .chip:hover {
-  background: rgba(102, 51, 153, 0.2);
+  background: rgba(1, 168, 137, 0.15);
 }
 
 .chip.exposure {
