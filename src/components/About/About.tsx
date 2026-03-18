@@ -1,11 +1,11 @@
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import * as resume from "../../data/resume";
-import styles from "./About.module.css";
+import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
+import * as resume from '../../data/resume'
+import styles from './About.module.css'
 
 export function About() {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const ref = useRef<HTMLDivElement>(null)
+  const isInView = useInView(ref, { once: true, margin: '-50px' })
 
   return (
     <motion.section
@@ -14,7 +14,7 @@ export function About() {
       className={styles.about}
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
     >
       <p className={styles.bio}>{resume.bio}</p>
       <div className={styles.details}>
@@ -30,5 +30,5 @@ export function About() {
         </a>
       </div>
     </motion.section>
-  );
+  )
 }

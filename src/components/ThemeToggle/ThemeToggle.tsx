@@ -1,19 +1,19 @@
-import { motion } from "framer-motion";
-import styles from "./ThemeToggle.module.css";
+import { motion } from 'framer-motion'
+import styles from './ThemeToggle.module.css'
 
 interface ThemeToggleProps {
-  theme: "light" | "dark";
-  onToggle: () => void;
+  theme: 'light' | 'dark'
+  onToggle: () => void
 }
 
 export function ThemeToggle({ theme, onToggle }: ThemeToggleProps) {
-  const isDark = theme === "dark";
+  const isDark = theme === 'dark'
 
   return (
     <button
       className={styles.toggle}
       onClick={onToggle}
-      aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
+      aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
     >
       <motion.svg
         width="22"
@@ -25,7 +25,7 @@ export function ThemeToggle({ theme, onToggle }: ThemeToggleProps) {
         strokeLinecap="round"
         strokeLinejoin="round"
         animate={{ rotate: isDark ? 360 : 0 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
       >
         {isDark ? (
           <motion.g
@@ -56,5 +56,5 @@ export function ThemeToggle({ theme, onToggle }: ThemeToggleProps) {
         )}
       </motion.svg>
     </button>
-  );
+  )
 }

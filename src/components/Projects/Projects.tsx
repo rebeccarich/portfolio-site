@@ -1,6 +1,6 @@
-import { Section } from "../Section/Section";
-import * as resume from "../../data/resume";
-import styles from "./Projects.module.css";
+import { Section } from '../Section/Section'
+import * as resume from '../../data/resume'
+import styles from './Projects.module.css'
 
 export function Projects() {
   return (
@@ -14,11 +14,7 @@ export function Projects() {
               rel="noopener noreferrer"
               className={styles.imageLink}
             >
-              <img
-                src={project.image}
-                alt={project.name}
-                className={styles.image}
-              />
+              <img src={project.image} alt={project.name} className={styles.image} />
             </a>
           )}
           <div className={styles.body}>
@@ -43,5 +39,5 @@ export function Projects() {
         </Section>
       ))}
     </>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import { Section } from "../Section/Section";
-import * as resume from "../../data/resume";
-import styles from "./Experience.module.css";
+import { Section } from '../Section/Section'
+import * as resume from '../../data/resume'
+import styles from './Experience.module.css'
 
 export function Experience() {
   return (
@@ -18,9 +18,7 @@ export function Experience() {
                 </div>
                 <span className={styles.period}>{job.period}</span>
               </div>
-              {job.description && (
-                <p className={styles.description}>{job.description}</p>
-              )}
+              {job.description && <p className={styles.description}>{job.description}</p>}
               {job.bullets.length > 0 && (
                 <ul className={styles.bullets}>
                   {job.bullets.map((bullet, j) => (
@@ -33,5 +31,5 @@ export function Experience() {
         ))}
       </div>
     </Section>
-  );
+  )
 }

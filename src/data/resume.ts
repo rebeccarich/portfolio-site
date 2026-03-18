@@ -1,164 +1,164 @@
 export interface Job {
-  title: string;
-  company: string;
-  period: string;
-  description: string;
-  bullets: string[];
+  title: string
+  company: string
+  period: string
+  description: string
+  bullets: string[]
 }
 
 export interface Project {
-  name: string;
-  description: string;
-  tech: string[];
-  url?: string;
-  image?: string;
+  name: string
+  description: string
+  tech: string[]
+  url?: string
+  image?: string
 }
 
 export interface Education {
-  degree: string;
-  school: string;
-  period: string;
-  distinction?: string;
+  degree: string
+  school: string
+  period: string
+  distinction?: string
 }
 
 export interface SkillCategory {
-  label: string;
-  skills: string[];
+  label: string
+  skills: string[]
 }
 
-export const name = "Rebecca Richards";
-export const title = "Principal Frontend Engineer";
-export const headlineTech = ["Tech Lead", "TypeScript", "JavaScript", "Node"];
-export const location = "Dublin, Ireland";
-export const email = "rebeccarich1@gmail.com";
-export const github = "https://github.com/rebeccarich";
-export const linkedin = "https://linkedin.com/in/becco";
+export const name = 'Rebecca Richards'
+export const title = 'Principal Frontend Engineer'
+export const headlineTech = ['Tech Lead', 'TypeScript', 'JavaScript', 'Node']
+export const location = 'Dublin, Ireland'
+export const email = 'rebeccarich1@gmail.com'
+export const github = 'https://github.com/rebeccarich'
+export const linkedin = 'https://linkedin.com/in/becco'
 
 export const bio =
-  "Software Engineer with 15+ years professional experience building commercial products. Proven track record of launching new products in startup, scaleup and corporate environments. Experienced in leading engineers in large multidisciplinary teams, composed of Software Engineers, UX Designers and Product Managers.";
+  'Software Engineer with 15+ years professional experience building commercial products. Proven track record of launching new products in startup, scaleup and corporate environments. Experienced in leading engineers in large multidisciplinary teams, composed of Software Engineers, UX Designers and Product Managers.'
 
 export const achievements = [
   "Led integration of in-house AI chatbot platform for natural language querying of business data into the company's frontend products.",
-  "Directed a remote cross-functional team of 7 engineers as Engineering Director, overseeing performance reviews, mentorship and professional development.",
-  "Launched HBC's first multi-banner responsive web app built on a custom server-side rendered microfrontend framework across five major retail banners.",
-];
+  'Directed a remote cross-functional team of 7 engineers as Engineering Director, overseeing performance reviews, mentorship and professional development.',
+  "Launched HBC's first multi-banner responsive web app built on a custom server-side rendered microfrontend framework across five major retail banners."
+]
 
 export const proficientSkills: SkillCategory[] = [
   {
-    label: "Languages",
-    skills: ["JavaScript", "TypeScript", "HTML", "CSS/SCSS"],
+    label: 'Languages',
+    skills: ['JavaScript', 'TypeScript', 'HTML', 'CSS/SCSS']
   },
   {
-    label: "Frameworks",
-    skills: ["React", "Vue", "Nuxt", "Node.js", "Express", "Fastify"],
+    label: 'Frameworks',
+    skills: ['React', 'Vue', 'Nuxt', 'Node.js', 'Express', 'Fastify']
   },
-  { label: "Data", skills: ["GraphQL", "REST", "D3"] },
-  { label: "Build", skills: ["Webpack", "Vite"] },
-  { label: "Testing", skills: ["Jest", "Vitest", "Cypress", "Playwright"] },
-];
+  { label: 'Data', skills: ['GraphQL', 'REST', 'D3'] },
+  { label: 'Build', skills: ['Webpack', 'Vite'] },
+  { label: 'Testing', skills: ['Jest', 'Vitest', 'Cypress', 'Playwright'] }
+]
 
 export const exposureSkills: string[] = [
-  "Angular",
-  "Svelte",
-  "Python",
-  "Java",
-  "PHP",
-  "C#",
-  "SQL",
-  "AWS",
-  "GCP",
-];
+  'Angular',
+  'Svelte',
+  'Python',
+  'Java',
+  'PHP',
+  'C#',
+  'SQL',
+  'AWS',
+  'GCP'
+]
 
 export const experience: Job[] = [
   {
-    title: "Principal Software Engineer",
-    company: "Earnest Analytics / Consumer Edge",
-    period: "June 2019 – Present",
+    title: 'Principal Software Engineer',
+    company: 'Earnest Analytics / Consumer Edge',
+    period: 'June 2019 – Present',
     description:
-      "Started with the company as a Senior SWE and progressed to Principal with time also spent as an Engineering Director.",
+      'Started with the company as a Senior SWE and progressed to Principal with time also spent as an Engineering Director.',
     bullets: [
       "Technical leadership for the frontend of Earnest's flagship SaaS product written in TypeScript using Nuxt and GraphQL.",
-      "Led multiple projects: API gateway migration to TypeScript/GraphQL, Nuxt 2 to Nuxt 3 migration, AI chatbot integration, and built an MCP server for platform APIs.",
-      "Working closely with Product to plan, estimate, and prioritise tasks and curate the product roadmap.",
-      "As Engineering Director, led a remote multidisciplinary team of 7 Software Engineers, working with UX Designers and Product Managers.",
-    ],
+      'Led multiple projects: API gateway migration to TypeScript/GraphQL, Nuxt 2 to Nuxt 3 migration, AI chatbot integration, and built an MCP server for platform APIs.',
+      'Working closely with Product to plan, estimate, and prioritise tasks and curate the product roadmap.',
+      'As Engineering Director, led a remote multidisciplinary team of 7 Software Engineers, working with UX Designers and Product Managers.'
+    ]
   },
   {
-    title: "Software Engineer III",
+    title: 'Software Engineer III',
     company: "Gilt / Hudson's Bay Company",
-    period: "October 2017 – May 2019",
+    period: 'October 2017 – May 2019',
     description:
-      "Worked on the Personalization team building personalized user experiences based on machine learning.",
+      'Worked on the Personalization team building personalized user experiences based on machine learning.',
     bullets: [
       "Launched HBC's first multi-banner responsive web app on a custom SSR microfrontend framework (Haru) using Node, Vue, and GraphQL.",
-      "Built a feature enabling core frontend functionality to be written once with separate presentation layers per banner.",
-      "Maintained design systems in Vue and React shared across multiple frontend apps.",
-    ],
+      'Built a feature enabling core frontend functionality to be written once with separate presentation layers per banner.',
+      'Maintained design systems in Vue and React shared across multiple frontend apps.'
+    ]
   },
   {
-    title: "Senior Fullstack Engineer",
-    company: "Each&Other",
-    period: "July 2013 – October 2017",
+    title: 'Senior Fullstack Engineer',
+    company: 'Each&Other',
+    period: 'July 2013 – October 2017',
     description:
-      "Working with UX designers and product owners in a UX-led environment to build pixel-perfect interactions.",
+      'Working with UX designers and product owners in a UX-led environment to build pixel-perfect interactions.',
     bullets: [
-      "Worked on CMS integrations, mobile apps (iOS and Android), and responsive web apps (Node, Backbone, Ember).",
-    ],
+      'Worked on CMS integrations, mobile apps (iOS and Android), and responsive web apps (Node, Backbone, Ember).'
+    ]
   },
   {
-    title: "Web & Mobile App Developer",
-    company: "Lucidity Digital",
-    period: "April 2012 – June 2013",
-    description: "",
-    bullets: [],
+    title: 'Web & Mobile App Developer',
+    company: 'Lucidity Digital',
+    period: 'April 2012 – June 2013',
+    description: '',
+    bullets: []
   },
   {
-    title: "Web Developer",
-    company: "BrandTactics",
-    period: "January 2011 – March 2012",
-    description: "",
-    bullets: [],
-  },
-];
+    title: 'Web Developer',
+    company: 'BrandTactics',
+    period: 'January 2011 – March 2012',
+    description: '',
+    bullets: []
+  }
+]
 
 export const projects: Project[] = [
   {
-    name: "Storybook Addon Flow Builder",
+    name: 'Storybook Addon Flow Builder',
     description:
-      "AI-driven user flow creation for Storybook. Describe a user journey in plain English, and the addon reads your component library, composes your atomic components into realistic screen layouts, and renders live previews — powered by Claude.",
-    tech: ["TypeScript", "React", "Storybook", "AI"],
-    url: "https://github.com/rebeccarich/storybook-addon-flow-builder",
-    image: "/projects/storybook-addon-flow-builder.png",
+      'AI-driven user flow creation for Storybook. Describe a user journey in plain English, and the addon reads your component library, composes your atomic components into realistic screen layouts, and renders live previews — powered by Claude.',
+    tech: ['TypeScript', 'React', 'Storybook', 'AI'],
+    url: 'https://github.com/rebeccarich/storybook-addon-flow-builder',
+    image: '/projects/storybook-addon-flow-builder.png'
   },
   {
-    name: "nuxt-launch-darkly",
+    name: 'nuxt-launch-darkly',
     description:
-      "A Nuxt 3 module for interacting with the LaunchDarkly SDK. Provides a composable for Composition API support and REST endpoints for custom integrations.",
-    tech: ["TypeScript", "Nuxt 3", "LaunchDarkly"],
-    url: "https://github.com/rebeccarich/nuxt-launch-darkly",
-    image: "/projects/nuxt-launch-darkly.svg",
+      'A Nuxt 3 module for interacting with the LaunchDarkly SDK. Provides a composable for Composition API support and REST endpoints for custom integrations.',
+    tech: ['TypeScript', 'Nuxt 3', 'LaunchDarkly'],
+    url: 'https://github.com/rebeccarich/nuxt-launch-darkly',
+    image: '/projects/nuxt-launch-darkly.svg'
   },
   {
-    name: "Intro to Computer Science",
+    name: 'Intro to Computer Science',
     description:
-      "An interactive presentation introducing Computer Science concepts to school students.",
-    tech: ["SCSS", "HTML", "Education"],
-    url: "https://github.com/rebeccarich/intro-to-comp-science",
-    image: "/projects/intro-to-comp-science.svg",
-  },
-];
+      'An interactive presentation introducing Computer Science concepts to school students.',
+    tech: ['SCSS', 'HTML', 'Education'],
+    url: 'https://github.com/rebeccarich/intro-to-comp-science',
+    image: '/projects/intro-to-comp-science.png'
+  }
+]
 
 export const education: Education[] = [
   {
-    degree: "BSc Hons Computing Multimedia Systems & Web Design",
-    school: "IADT",
-    period: "2009 – 2010",
-    distinction: "First Class Honours (1.1)",
+    degree: 'BSc Hons Computing Multimedia Systems & Web Design',
+    school: 'IADT',
+    period: '2009 – 2010',
+    distinction: 'First Class Honours (1.1)'
   },
   {
-    degree: "BSc Computing Multimedia Programming",
-    school: "IADT",
-    period: "2006 – 2009",
-    distinction: "Distinction",
-  },
-];
+    degree: 'BSc Computing Multimedia Programming',
+    school: 'IADT',
+    period: '2006 – 2009',
+    distinction: 'Distinction'
+  }
+]

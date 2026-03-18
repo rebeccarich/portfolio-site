@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
-import { Section } from "../Section/Section";
-import * as resume from "../../data/resume";
-import styles from "./Skills.module.css";
+import { motion } from 'framer-motion'
+import { Section } from '../Section/Section'
+import * as resume from '../../data/resume'
+import styles from './Skills.module.css'
 
 export function Skills() {
   return (
@@ -17,7 +17,7 @@ export function Skills() {
                   key={skill}
                   className={styles.chip}
                   whileHover={{ scale: 1.05, y: -2 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 17 }}
                 >
                   {skill}
                 </motion.span>
@@ -37,5 +37,5 @@ export function Skills() {
         </div>
       </div>
     </Section>
-  );
+  )
 }

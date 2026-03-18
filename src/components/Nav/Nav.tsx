@@ -1,46 +1,46 @@
-import { useState, useEffect } from "react";
-import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
-import styles from "./Nav.module.css";
+import { useState, useEffect } from 'react'
+import { ThemeToggle } from '../ThemeToggle/ThemeToggle'
+import styles from './Nav.module.css'
 
 interface NavProps {
-  theme: "light" | "dark";
-  onToggleTheme: () => void;
+  theme: 'light' | 'dark'
+  onToggleTheme: () => void
 }
 
-const sections = ["about", "skills", "experience", "projects", "contact"];
+const sections = ['about', 'skills', 'experience', 'projects', 'contact']
 
 export function Nav({ theme, onToggleTheme }: NavProps) {
-  const [active, setActive] = useState("");
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [active, setActive] = useState('')
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActive(entry.target.id);
+            setActive(entry.target.id)
           }
-        });
+        })
       },
-      { rootMargin: "-50% 0px -50% 0px" }
-    );
+      { rootMargin: '-50% 0px -50% 0px' }
+    )
 
     sections.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
+      const el = document.getElementById(id)
+      if (el) observer.observe(el)
+    })
 
-    return () => observer.disconnect();
-  }, []);
+    return () => observer.disconnect()
+  }, [])
 
   const handleClick = (id: string) => {
-    setMenuOpen(false);
-    const el = document.getElementById(id);
+    setMenuOpen(false)
+    const el = document.getElementById(id)
     if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - 80;
-      window.scrollTo({ top, behavior: "smooth" });
+      const top = el.getBoundingClientRect().top + window.scrollY - 80
+      window.scrollTo({ top, behavior: 'smooth' })
     }
-  };
+  }
 
   return (
     <nav className={styles.nav}>
@@ -50,7 +50,7 @@ export function Nav({ theme, onToggleTheme }: NavProps) {
         </a>
 
         <button
-          className={`${styles.hamburger} ${menuOpen ? styles.open : ""}`}
+          className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -59,11 +59,11 @@ export function Nav({ theme, onToggleTheme }: NavProps) {
           <span />
         </button>
 
-        <ul className={`${styles.links} ${menuOpen ? styles.show : ""}`}>
+        <ul className={`${styles.links} ${menuOpen ? styles.show : ''}`}>
           {sections.map((id) => (
             <li key={id}>
               <button
-                className={`${styles.link} ${active === id ? styles.active : ""}`}
+                className={`${styles.link} ${active === id ? styles.active : ''}`}
                 onClick={() => handleClick(id)}
               >
                 {id.charAt(0).toUpperCase() + id.slice(1)}
@@ -75,5 +75,5 @@ export function Nav({ theme, onToggleTheme }: NavProps) {
         <ThemeToggle theme={theme} onToggle={onToggleTheme} />
       </div>
     </nav>
-  );
+  )
 }

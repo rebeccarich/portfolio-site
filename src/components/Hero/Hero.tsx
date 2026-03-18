@@ -1,18 +1,18 @@
-import { motion, type Variants } from "framer-motion";
-import * as resume from "../../data/resume";
-import styles from "./Hero.module.css";
+import { motion, type Variants } from 'framer-motion'
+import * as resume from '../../data/resume'
+import styles from './Hero.module.css'
 
 const container: Variants = {
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.15, delayChildren: 0.3 },
-  },
-};
+    transition: { staggerChildren: 0.15, delayChildren: 0.3 }
+  }
+}
 
 const item: Variants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-};
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+}
 
 export function Hero() {
   return (
@@ -33,9 +33,7 @@ export function Hero() {
           {resume.headlineTech.map((tech, i) => (
             <span key={tech}>
               <span className={styles.tech}>{tech}</span>
-              {i < resume.headlineTech.length - 1 && (
-                <span className={styles.separator}>·</span>
-              )}
+              {i < resume.headlineTech.length - 1 && <span className={styles.separator}>·</span>}
             </span>
           ))}
         </motion.div>
@@ -44,7 +42,7 @@ export function Hero() {
       <motion.div
         className={styles.scrollIndicator}
         animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
       >
         <svg
           width="24"
@@ -58,5 +56,5 @@ export function Hero() {
         </svg>
       </motion.div>
     </section>
-  );
+  )
 }

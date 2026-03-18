@@ -1,6 +1,6 @@
-import { Section } from "../Section/Section";
-import * as resume from "../../data/resume";
-import styles from "./Education.module.css";
+import { Section } from '../Section/Section'
+import * as resume from '../../data/resume'
+import styles from './Education.module.css'
 
 export function Education() {
   return (
@@ -13,13 +13,11 @@ export function Education() {
             <p className={styles.school}>{edu.school}</p>
             <div className={styles.meta}>
               <span>{edu.period}</span>
-              {edu.distinction && (
-                <span className={styles.distinction}>{edu.distinction}</span>
-              )}
+              {edu.distinction && <span className={styles.distinction}>{edu.distinction}</span>}
             </div>
           </div>
         ))}
       </div>
     </Section>
-  );
+  )
 }

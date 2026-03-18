@@ -1,17 +1,17 @@
-import { useTheme } from "./theme/useTheme";
-import { Nav } from "./components/Nav/Nav";
-import { Hero } from "./components/Hero/Hero";
-import { About } from "./components/About/About";
-import { Skills } from "./components/Skills/Skills";
-import { Achievements } from "./components/Achievements/Achievements";
-import { Experience } from "./components/Experience/Experience";
-import { Projects } from "./components/Projects/Projects";
-import { Education } from "./components/Education/Education";
-import { Contact } from "./components/Contact/Contact";
-import styles from "./App.module.css";
+import { useTheme } from './theme/useTheme'
+import { Nav } from './components/Nav/Nav'
+import { Hero } from './components/Hero/Hero'
+import { About } from './components/About/About'
+import { Skills } from './components/Skills/Skills'
+import { Achievements } from './components/Achievements/Achievements'
+import { Experience } from './components/Experience/Experience'
+import { Projects } from './components/Projects/Projects'
+import { Education } from './components/Education/Education'
+import { Contact } from './components/Contact/Contact'
+import styles from './App.module.css'
 
 function App() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme()
 
   return (
     <>
@@ -56,7 +56,7 @@ function App() {
         <p>&copy; {new Date().getFullYear()} Rebecca Richards</p>
       </footer>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

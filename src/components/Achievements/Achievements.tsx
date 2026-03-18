@@ -1,6 +1,6 @@
-import { Section } from "../Section/Section";
-import * as resume from "../../data/resume";
-import styles from "./Achievements.module.css";
+import { Section } from '../Section/Section'
+import * as resume from '../../data/resume'
+import styles from './Achievements.module.css'
 
 export function Achievements() {
   return (
@@ -14,5 +14,5 @@ export function Achievements() {
         ))}
       </ul>
     </Section>
-  );
+  )
 }
