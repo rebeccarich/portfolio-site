@@ -11,6 +11,7 @@ export interface Project {
   description: string;
   tech: string[];
   url?: string;
+  image?: string;
 }
 
 export interface Education {
@@ -27,10 +28,9 @@ export interface SkillCategory {
 
 export const name = "Rebecca Richards";
 export const title = "Principal Frontend Engineer";
-export const headlineTech = ["TypeScript", "JavaScript", "React", "Node"];
+export const headlineTech = ["Tech Lead", "TypeScript", "JavaScript", "Node"];
 export const location = "Dublin, Ireland";
 export const email = "rebeccarich1@gmail.com";
-export const phone = "+353 87 269 7854";
 export const github = "https://github.com/rebeccarich";
 export const linkedin = "https://linkedin.com/in/becco";
 
@@ -127,12 +127,16 @@ export const projects: Project[] = [
     description:
       "Model Context Protocol server for accessing platform APIs via AI assistants.",
     tech: ["TypeScript", "Node.js", "MCP"],
+    url: "https://github.com/rebeccarich",
+    image: "/projects/mcp-server.png",
   },
   {
     name: "Open Source Contributions",
     description:
       "Contributions to open source projects in the frontend ecosystem.",
     tech: ["TypeScript", "JavaScript", "Vue", "React"],
+    url: "https://github.com/rebeccarich",
+    image: "/projects/open-source.png",
   },
 ];
 
