@@ -19,14 +19,14 @@ function App() {
       <Hero />
       <About />
       <main className={styles.main}>
-        {/* Row 1: Achievements (full width) */}
-        <div className={styles.fullWidth}>
-          <Achievements />
-        </div>
-
-        {/* Row 2: Skills (full width) */}
-        <div id="skills" className={styles.fullWidth}>
-          <Skills />
+        {/* Row 1: Achievements (40%) + Skills (60%) */}
+        <div className={styles.rowReverse}>
+          <div className={styles.narrow}>
+            <Achievements />
+          </div>
+          <div className={styles.wide}>
+            <Skills />
+          </div>
         </div>
 
         {/* Row 3: Experience (full width) */}
