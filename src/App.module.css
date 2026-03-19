@@ -69,6 +69,26 @@
   opacity: 0.5;
 }
 
+.footerLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footerLinks a {
+  color: var(--color-text-secondary);
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footerLinks a:hover {
+  color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
 @media (max-width: 768px) {
   .row,
   .rowReverse {

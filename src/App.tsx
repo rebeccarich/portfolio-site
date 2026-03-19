@@ -8,6 +8,8 @@ import { Experience } from './components/Experience/Experience'
 import { Projects } from './components/Projects/Projects'
 import { Education } from './components/Education/Education'
 import { Contact } from './components/Contact/Contact'
+import { GitHubIcon, LinkedInIcon, DownloadIcon } from './components/Icons/Icons'
+import * as cv from './data/cv'
 import styles from './App.module.css'
 
 function App() {
@@ -51,6 +53,17 @@ function App() {
         </div>
       </main>
       <footer className={styles.footer}>
+        <div className={styles.footerLinks}>
+          <a href={cv.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <GitHubIcon size={16} />
+          </a>
+          <a href={cv.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <LinkedInIcon size={16} />
+          </a>
+          <a href="/rebecca-richards-cv.pdf" download aria-label="Download CV">
+            <DownloadIcon size={16} />
+          </a>
+        </div>
         <p>&copy; {new Date().getFullYear()} Rebecca Richards</p>
       </footer>
     </>
