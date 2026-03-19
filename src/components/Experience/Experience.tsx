@@ -4,15 +4,41 @@ import * as cv from '../../data/cv'
 import { CalendarIcon } from '../Icons/Icons'
 import styles from './Experience.module.css'
 
+function JobDetail({ job }: { job: (typeof cv.experience)[number] }) {
+  return (
+    <>
+      <div className={styles.detailPeriod}>
+        <CalendarIcon size={13} />
+        {job.period}
+      </div>
+      <h3 className={styles.detailTitle}>{job.title}</h3>
+      <p className={styles.detailCompany}>{job.company}</p>
+      {job.description && <p className={styles.description}>{job.description}</p>}
+      {job.bullets.length > 0 && (
+        <ul className={styles.bullets}>
+          {job.bullets.map((bullet, j) => (
+            <li key={j}>{bullet}</li>
+          ))}
+        </ul>
+      )}
+    </>
+  )
+}
+
 export function Experience() {
   const [activeIndex, setActiveIndex] = useState(0)
+  const [expandedIndex, setExpandedIndex] = useState(0)
+
+  const toggleAccordion = (i: number) => {
+    setExpandedIndex(expandedIndex === i ? -1 : i)
+  }
 
   return (
     <section id="experience" className={styles.wrapper}>
       <h2 className={styles.heading}>Experience</h2>
 
+      {/* Desktop: two-column layout */}
       <div className={styles.grid}>
-        {/* Timeline nav — left column */}
         <div className={styles.nav}>
           {cv.experience.map((job, i) => (
             <button
@@ -33,7 +59,6 @@ export function Experience() {
           ))}
         </div>
 
-        {/* Detail — right column */}
         <div className={styles.detailArea}>
           <AnimatePresence mode="wait">
             <motion.div
@@ -44,25 +69,56 @@ export function Experience() {
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
             >
-              <div className={styles.detailPeriod}>
-                <CalendarIcon size={13} />
-                {cv.experience[activeIndex].period}
-              </div>
-              <h3 className={styles.detailTitle}>{cv.experience[activeIndex].title}</h3>
-              <p className={styles.detailCompany}>{cv.experience[activeIndex].company}</p>
-              {cv.experience[activeIndex].description && (
-                <p className={styles.description}>{cv.experience[activeIndex].description}</p>
-              )}
-              {cv.experience[activeIndex].bullets.length > 0 && (
-                <ul className={styles.bullets}>
-                  {cv.experience[activeIndex].bullets.map((bullet, j) => (
-                    <li key={j}>{bullet}</li>
-                  ))}
-                </ul>
-              )}
+              <JobDetail job={cv.experience[activeIndex]} />
             </motion.div>
           </AnimatePresence>
         </div>
+      </div>
+
+      {/* Mobile: accordion */}
+      <div className={styles.accordion}>
+        {cv.experience.map((job, i) => (
+          <div key={i} className={styles.accordionItem}>
+            <button
+              className={`${styles.accordionHeader} ${expandedIndex === i ? styles.expanded : ''}`}
+              onClick={() => toggleAccordion(i)}
+            >
+              <div className={styles.accordionDot} />
+              <div className={styles.accordionMeta}>
+                <span className={styles.accordionTitle}>{job.title}</span>
+                <span className={styles.accordionCompany}>{job.company.split('/')[0].trim()}</span>
+              </div>
+              <svg
+                className={styles.chevron}
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <AnimatePresence initial={false}>
+              {expandedIndex === i && (
+                <motion.div
+                  className={styles.accordionBody}
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: 'easeInOut' }}
+                >
+                  <div className={styles.accordionContent}>
+                    <JobDetail job={job} />
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        ))}
       </div>
     </section>
   )
