@@ -76,13 +76,17 @@ export function Nav({ theme, onToggleTheme }: NavProps) {
               </button>
             </li>
           ))}
+          <li>
+            <a href="/rebecca-richards-cv.pdf" download className={styles.cvLink}>
+              <DownloadIcon size={14} />
+              CV
+            </a>
+          </li>
         </ul>
 
-        <a href="/rebecca-richards-cv.pdf" download className={styles.cvLink}>
-          <DownloadIcon size={14} />
-          CV
-        </a>
-        <ThemeToggle theme={theme} onToggle={onToggleTheme} />
+        <div className={styles.themeToggle}>
+          <ThemeToggle theme={theme} onToggle={onToggleTheme} />
+        </div>
       </div>
     </nav>
   )
