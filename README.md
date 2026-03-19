@@ -24,13 +24,13 @@ Personal portfolio and CV site. Built with React & TypeScript
 ### Getting started
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 ### Build
 
 ```bash
-npm run build
-npm run preview
+pnpm build
+pnpm preview
 ```
