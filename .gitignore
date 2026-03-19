@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# agent stuff
+.playwright-mcp/
+.superpowers/
+docs
